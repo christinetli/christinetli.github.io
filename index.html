@@ -18,11 +18,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 // product
 <h2 id="product-name">Shirt</h2>
 <p id="product-price">$29.99</p>
-
+  
 // push to GTM data layer
 <script> 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({productName : document.getElementById("product-name").textContent, productPrice : document.getElementById("product-price").textContent});
 </script>
 </body>
+
+// button
+<button id="send-product">Send Product Data</button>
+
+<script>
+  document.getElementById("send-product").addEventListener("click", function () {
+    const productData = window.dataLayer.find(item => item.productName && item.productPrice);
+    fetch("https://httpbin.org/post", {
+      method: "POST",
+      body: JSON.stringify({
+        productName: productData.productName,
+        productPrice: productData.productPrice
+      })    
+    })
+      .then(response => response.json()
+      .then(data => { console.log(data.json);
+  });
 </html>
