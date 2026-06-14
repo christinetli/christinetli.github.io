@@ -1,3 +1,5 @@
 # christinetli.github.io
-<h1 id='product-name'>Super Widget</h1>
-<span id='product-price'>19.99</span>
+<h2 id="product-name">Shirt</h2>
+<p id="product-price">$29.99</p>
+<script> window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({productName : document.getElementById("product-name").textContent, productPrice : document.getElementById("product-price").textContent});</script>
