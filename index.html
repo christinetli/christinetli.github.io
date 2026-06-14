@@ -15,18 +15,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-// product
+<!-- Product -->
 <h2 id="product-name">Shirt</h2>
 <p id="product-price">$29.99</p>
   
-// push to GTM data layer
+<!-- Push to GTM Data Layer -->
 <script> 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({productName : document.getElementById("product-name").textContent, productPrice : document.getElementById("product-price").textContent});
 </script>
-</body>
 
-// button
+
+<!-- Button -->
 <button id="send-product">Send Product Data</button>
 
 <script>
@@ -43,3 +43,4 @@ window.dataLayer.push({productName : document.getElementById("product-name").tex
       .then(data => { console.log(data.json);
   });
 </html>
+</body>
