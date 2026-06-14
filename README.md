@@ -1,1 +1,3 @@
 # christinetli.github.io
+<h1 id='product-name'>Super Widget</h1>
+<span id='product-price'>19.99</span>
